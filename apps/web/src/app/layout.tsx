@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from '@/components/theme-context';
 import AppShell from '@/components/AppShell';
 import './globals.css';
@@ -27,6 +28,7 @@ export default function RootLayout({
         <ThemeProvider>
           <AppShell>{children}</AppShell>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
